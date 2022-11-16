@@ -1,0 +1,10 @@
+[
+    {
+        "name": "GCC arm-none-linux-gnueabihf - custom toolchain setup",
+        "compilers": {
+            "C": "arm-none-linux-gnueabihf-gcc",
+            "CXX": "arm-none-linux-gnueabihf-g++"
+        },
+        "toolchainFile": "${workspaceFolder}/cross.cmake"
+    }
+]

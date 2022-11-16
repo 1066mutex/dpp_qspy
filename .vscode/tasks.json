@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    // /* Configure Yocto SDK Constants from settings.json */
+    // "options": {
+        // "env": {
+            // "CXX": "${config:VARISCITE.CXX}",
+            // "CC": "${config:VARISCITE.CC}",
+        // }
+    // },
+    /* Configure integrated VS Code Terminal */
+    "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+    },
+    "tasks": [
+        /* Configure launch.json (debug) preLaunchTask Task */
+        {
+            "label": "remote-deploy",
+            "isBackground": true,
+            "problemMatcher": {
+                "base": "$gcc",
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "starting gdb debugging",
+                    "endsPattern": "starting gdb server on target"
+                }
+            },
+            "type": "shell",
+            "command": "sh",
+            "args": [
+                "remote-deploy.sh",
+                "${config:ENV_CONFIG.TARGET_IP}",
+                "${config:ENV_CONFIG.DEBUG_PORT}",
+                "${config:ENV_CONFIG.BINARY_DIR}",
+                "${config:ENV_CONFIG.BINARY}",
+                "${config:ENV_CONFIG.TARGET_DIR}",
+            ],
+            // "dependsOn": [
+                // "build"
+            // ],
+        },
+        /* Configure Build Task */
+        /* !!! can add make clean */
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "cd build; make clean; make -j$(nproc)",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "cmake.generator": "Unix Makefiles",
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.configureArgs": [
+        "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cross.cmake"
+    ],
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+   
+   // configuration for code deployment to target and remote debugging 
+   // required by: tasks.json, launch.json
+   "ENV_CONFIG": { 
+        "TARGET_IP": "192.168.0.30",
+        "DEBUG_PORT": "3000",
+        "BINARY_DIR": "${workspaceFolder}/build",
+        "BINARY": "dpp",
+        "TARGET_DIR": "../lab1",
+},
+"files.associations": {
+    "system_error": "cpp",
+    "memory": "cpp",
+    "random": "cpp",
+    "optional": "cpp",
+    "array": "cpp",
+    "atomic": "cpp",
+    "bit": "cpp",
+    "*.tcc": "cpp",
+    "cctype": "cpp",
+    "clocale": "cpp",
+    "cmath": "cpp",
+    "cstdarg": "cpp",
+    "cstddef": "cpp",
+    "cstdint": "cpp",
+    "cstdio": "cpp",
+    "cstdlib": "cpp",
+    "cwchar": "cpp",
+    "cwctype": "cpp",
+    "deque": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp",
+    "exception": "cpp",
+    "algorithm": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "memory_resource": "cpp",
+    "numeric": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp",
+    "fstream": "cpp",
+    "initializer_list": "cpp",
+    "iosfwd": "cpp",
+    "iostream": "cpp",
+    "istream": "cpp",
+    "limits": "cpp",
+    "new": "cpp",
+    "ostream": "cpp",
+    "sstream": "cpp",
+    "stdexcept": "cpp",
+    "streambuf": "cpp",
+    "typeinfo": "cpp",
+    "cstring": "cpp"
+}
+    
+}

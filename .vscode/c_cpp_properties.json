@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/local/arago-x86_64/sysroots/armv7at2hf-neon-linux-gnueabi/include/**"
+            ]
+        }
+    ],
+    "version": 4
+}
